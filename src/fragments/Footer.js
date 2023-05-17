@@ -30,22 +30,22 @@ export default function Footer() {
           <h2>Quick Links</h2>
           <ul >
             <li>
-              <a aria-current="page" href="#">Home</a>
+              <a aria-current="page" href="/">Home</a>
             </li>
             <li>
-              <a href="#">Menu</a>
+              <a href="/">Menu</a>
             </li>
             <li >
-              <a href="#">Order Online</a>
+              <a href="/">Order Online</a>
             </li>
             <li >
-              <a href="#">Reviews</a>
+              <a href="/">Reviews</a>
             </li>
             <li >
-              <a href="#">About Us</a>
+              <a href="/">About Us</a>
             </li>
             <li >
-              <a href="#">Contacts</a>
+              <a href="/">Contacts</a>
             </li>
           </ul>
         </div>
