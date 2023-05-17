@@ -1,38 +1,850 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap");
+
+
+/* navbar  */
+
+.navbar {
+  --bs-navbar-padding-y: 0;
+}
+#logo {
+  width: 150px;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navbar-brand {
+  width: 160px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nav-item {
+  font-weight: bold;
+}
+.nav-item:hover {
+  scale: 1.1;
+  color: black;
+}
+#nav-icon {
+  border: 2px solid gold;
+  border-radius: 100%;
+  font-size: 1rem;
+  padding: 0.4rem;
+}
+#nav-icon:hover {
+  scale: 1.1;
+}
+#nav-button {
+  background-color: rgb(255, 195, 43);
+  font-weight: bold;
+  border: 0;
+  border-radius: 30px;
+  padding: 0.2rem 0.6rem;
+  box-shadow: 0 0 4px gold;
+}
+#nav-button:hover {
+  color: white;
+  scale: 1.1;
+}
+
+/* top-section/container */
+.top-sec {
+  background-color: rgba(249, 231, 198, 0.4);
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5% 5%;
+}
+
+.top-sec-text {
+  width: 40%;
+}
+.top-sec-text > h1 {
+  font-family: "Darumadrop One", cursive;
+  font-size: 3rem;
+}
+
+.top-sec-btn {
+  margin: auto 2rem;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  font-weight: bold;
+}
+#top-sec-btn1 {
+  color: white;
+  background-color: rgb(255, 187, 0);
+  border: 0;
+}
+#top-sec-btn1:hover {
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 10px goldenrod;
+  scale: 1.1;
+}
+#top-sec-btn2 {
+  background-color: white;
+  border: 2px solid goldenrod;
+}
+#top-sec-btn2:hover {
+  background-color: rgb(255, 187, 0);
+  box-shadow: 0 0 10px grey;
+  color: white;
+  scale: 1.1;
+}
+.top-sec-imglist {
+  width: 60%;
+  margin-inline: 2.5%;
+  display: flex;
+}
+.top-sec-img {
+  border-radius: 35% 65% 53% 47% / 47% 35% 65% 53%;
+  background-image: linear-gradient(
+    45deg,
+    rgb(255, 213, 135),
+    rgba(255, 255, 255, 0)
+  );
+}
+.top-sec-img img {
+  width: 90%;
+  transform: translate(-5%, 5%);
+}
+.top-sec-list {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+
+.top-sec-imglist ul > li {
+  list-style: none;
+  margin: 1rem 0;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 0.2rem 0.5rem;
+  font-weight: bold;
+  transform: translate(-70%, -50%);
+  width: 120px;
+}
+.top-sec-imglist ul > li:hover {
+  scale: 1.1;
+}
+.items-logo-top-sec {
+  width: 1.5rem;
+  border-radius: 100%;
+}
+.img-active {
+  box-shadow: 0 0 10px grey;
+}
+li[data-imgactive] {
+  box-shadow: 0 0 10px grey;
+}
+
+@media (width<=1070px) {
+  .top-sec {
+    flex-direction: column;
+  }
+
+  .top-sec-text {
+    width: 80%;
+    margin-bottom: 3rem;
+  }
+}
+@media (width<=870px) {
+  .top-sec-text {
+    width: 85%;
+    margin-bottom: 3rem;
+  }
+  .top-sec-text > p > span {
+    display: none;
+  }
+  .top-sec-imglist {
+    width: 80%;
+    margin-inline: 2.5%;
+  }
+  .top-sec-img img {
+    width: 100%;
+    transform: translate(-5%, 5%);
+  }
+}
+@media (width<=520px) {
+  .top-sec {
+    padding-bottom: 4rem;
+  }
+  .top-sec-text {
+    width: 95%;
+    margin-bottom: 3rem;
+  }
+  .top-sec-text > h1 {
+    font-size: 2.5rem;
+  }
+  .top-sec-text > p > span {
+    display: none;
+  }
+  .top-sec-imglist {
+    width: 100%;
+    margin-inline: 2.5%;
+  }
+  .top-sec-img img {
+    width: 90%;
+    transform: translate(-5%, 5%);
+  }
+  .top-sec-btn {
+    margin: 1rem;
+  }
+  .top-sec-list {
+    position: absolute;
+    left: 65%;
+  }
+  .top-sec-imglist ul > li {
+    padding-inline: 5px;
+    transform: none;
+    width: 105px;
+  }
+  .top-sec-list > ul {
+    margin: 0 1rem 0 auto;
+    padding: 0;
+  }
+}
+@media (width<=340px) {
+  .top-sec {
+    padding-bottom: 4rem;
+  }
+  .top-sec-text {
+    width: 95%;
+    margin-bottom: 3rem;
+  }
+  .top-sec-text > h1 {
+    font-size: 2.1rem;
+  }
+  .top-sec-text > p > span {
+    display: none;
+  }
+  .top-sec-imglist {
+    width: 100%;
+    margin-inline: 2.5%;
+  }
+  .top-sec-img img {
+    width: 90%;
+    transform: translate(-5%, 5%);
+  }
+
+  .top-sec-list {
+    position: absolute;
+    left: 50%;
+  }
+  .top-sec-imglist ul > li {
+    padding-inline: 5px;
+    transform: none;
+    width: 105px;
+  }
+  .top-sec-list > ul {
+    margin: 0 1rem 0 auto;
+    padding: 0;
+  }
+  .navbar-brand {
+    width: 120px;
+  }
+}
+
+/* popular dishes section */
+.popular-dishes {
+  background-color: rgba(249, 231, 198, 0.4);
+  padding-bottom: 1.5rem;
+}
+.popular-dishes-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.popular-dishes-heading > h1 {
+  font-family: "Darumadrop One", cursive;
+  font-size: 3rem;
+  border-bottom: 3.5px solid;
+  border-image: linear-gradient(to right, orange, rgba(166, 146, 176, 0)) 1;
+}
+.popular-dishes-heading > p {
+  font-size: 2rem;
+  color: crimson;
+  filter: drop-shadow(0 0 0.75rem crimson);
+}
+.popular-dishes-cardsSection {
+  display: flex;
+  overflow-x: scroll;
+}
+.popular-dishes-cardsSection::-webkit-scrollbar {
+  display: none;
+}
+.popular-dishes-cards {
+  background-color: white;
+  width: 250px;
+  margin: 1rem 1rem 2rem 1rem;
+  border-radius: 20px;
+  padding-bottom: 1rem;
+  box-shadow: 1px 2px 5px rgb(236, 233, 233);
+}
+
+.popular-dishes-cards-img {
+  width: 270px;
+}
+.popular-dishes-cards-img > img {
+  width: 240px;
+  height: 190px;
+  margin: 0.5rem 10px;
+}
+.popular-dishes-cards-icon {
+  text-align: center;
+  color: gold;
+}
+.popular-dishes-cards-text > p {
+  text-align: center;
+  padding-inline: 0.5rem;
+  font-size: 0.8rem;
+  height: 58px;
+}
+.popular-dishes-cards-text > h3 {
+  text-align: center;
+  font-family: "Darumadrop One", cursive;
+  padding-inline: 0.5rem;
+}
+.popular-dishes-cards-symbols {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 0.7rem;
+}
+.popular-dishes-cards-symbols > p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: cursive;
+  align-self: last baseline;
+  margin: 0;
+}
+.popular-dishes-cards-symbols > button {
+  border-radius: 30px;
+  border: 0;
+  background-color: rgb(255, 198, 93);
+  padding: 3px 10px;
+  font-weight: bold;
+}
+.popular-dishes-cards-symbols > button:hover {
+  scale: 1.05;
+}
+
+@media (width<=410px){
+  .popular-dishes-heading > h1 {
+    font-family: "Darumadrop One", cursive;
+    font-size: 2.5rem;
+    border-bottom: 3.5px solid;
+    border-image: linear-gradient(to right, orange, rgba(166, 146, 176, 0)) 1;
+  }
+}
+
+
+/* services section */
+
+.services-sec {
+  padding: 2rem 2rem;
+  display: flex;
+  background-color: rgba(249, 231, 198, 0.1);
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+.services-sec-img {
+  width: 40%;
+}
+.services-sec-img > img {
+  width: 100%;
+}
+.services-sec-text {
+  width: 60%;
+}
+.services-sec-text > h1 {
+  font-family: "Darumadrop One", cursive;
+  color: rgb(255, 123, 0);
+  font-size: 2.5rem;
+}
+.services-sec-text > h5 > button {
+  background-color: #f9bf53;
+  border-radius: 30px;
+  border: 0;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.services-sec-text > h5 > button:hover {
+  background-color: #f8a100;
+  box-shadow: 0 0 10px wheat;
+  scale: 1.05;
+}
+.service-h6-section{
+  display: flex;
+
+}
+.service-h6-section > h6 {
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-family: "Darumadrop One", cursive;
+}
+.service-h6-section > h6 img {
+  width: 1.3rem;
+}
+
+@media (width<=700px){
+  .services-sec {
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+  .services-sec-img {
+    width: 90%;
+  }
+  .services-sec-img > img {
+    width: 100%;
+  }
+  .services-sec-text {
+    width: 100%;
+  }
+  
+  .service-h6-section{
+    display: flex;
+  
+  }
+  .service-h6-section > h6 {
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-family: "Darumadrop One", cursive;
+  }
+  .service-h6-section > h6 img {
+    width: 1.3rem;
+  }
+
+}
+@media (width<=470px){
+  .services-sec {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .services-sec-img {
+    width: 90%;
+  }
+  .services-sec-img > img {
+    width: 100%;
+  }
+  .services-sec-text {
+    width: 100%;
+  }
+  .services-sec-text > h1 {
+    font-size: 2.1rem;
+  }
+  .service-h6-section{
+    display: flex;
+  
+  }
+  .service-h6-section > h6 {
+    margin: 1rem 1rem;
+    font-size: 1rem;
+  }
+  .service-h6-section > h6 img {
+    width: 1rem;
+  }
+
+}
+
+/* menu-section */
+
+
+
+.menu-section{
+  text-align: center;
+  padding: 2rem;
+  background-color: rgb(245, 222, 179,.8);
+}
+.menu-section > h3{
+  font-family: cursive;
+  font-weight: bold;
+}
+.menu-section > h2{
+  font-family: "Darumadrop One", cursive;
+  color: crimson;
+}
+.menu-section > h1 > button{
+  font-family: "Darumadrop One", cursive;
+  border: 0;
+  background-color: #ffa600b3;
+  border-radius: 100px;
+  padding: .5rem 1rem;
+  
+}
+.menu-section > h1 > button:hover{
+  background-color: #ffa600;
+  box-shadow: 0 0 10px rgb(179, 172, 172);
+  scale: 1.05;
+}
+.menu-section > h1 > button i{
+  font-size: 1.5rem;
+}
+
+@media (width<=435px){
+  .menu-section > h3{
+    font-size: 1.2rem;
+  }
+  .menu-section > h2{
+    font-size: 1.5rem;
+  }
+  .menu-section > h1 > button{
+    font-size: 1.7rem;
+  }
+  .menu-section > h1 > button i{
+    font-size: 1.2rem;
+  }
+}
+
+/* reservation-section */
+
+.reservation-section{
+ display: flex; 
+ place-items: center;
+ background-color: rgba(249, 231, 198, 0.4);
+ padding-inline: 10%;
+ 
+}
+.reservation-section-text > h2{
+  font-family: "Darumadrop One", cursive;
+  color: rgb(255, 0, 0);
+}
+.reservation-section-text > h4 > button{
+  font-family: "Darumadrop One", cursive;
+  border: 0;
+  background-color: #ffb429;
+  border-radius: 100px;
+  padding: .5rem 1rem;
+}
+.reservation-section-text > h4 > button:hover{
+  background-color: #ffa600;
+  box-shadow: 0 0 10px rgb(179, 172, 172);
+  scale: 1.05;
+}
+.reservation-section-text > h4 > button i{
+  font-size: .9rem;
+}
+
+
+@media (width<=900px){
+  .reservation-section{
+    flex-direction: column;
+    padding:5% 10%;
+   }
+}
+@media (width<=500px){
+  .reservation-section-img{
+    width: 90%;
+  }
+  .reservation-section-img > img{
+    width: 100%;
+  }
+}
+
+/* reviews-section */
+
+
+.reviews-section{
+  background-color: white;
+}
+
+
+.reviews-section-heading{
+  padding: 1rem 2rem;
+}
+.reviews-section-heading > h1 {
+  font-family: "Darumadrop One", cursive;
+  font-size: 3rem;
+  width: fit-content;
+  border-bottom: 3.5px solid;
+  border-image: linear-gradient(to right, orange, rgba(166, 146, 176, 0)) 1;
+}
+#carouselExampleCaptions{
+  width: 80%;
+  box-shadow: 0 0 10px orange;
+  border-radius: 30px;
+  margin: 2rem auto;
+}
+
+.carousel-indicators > button{
+  color: black;
+}
+.carousel-item > img{
+  width: 80%;
+  border-radius: 30px;
+  /* aspect-ratio: 1.5/1; */
+}
+.carousel-caption{
+  color: black;
+  position: relative;
+  background-image: url(./fragments/images/review-bg.jpg);
+  right: auto;
+  left: auto;
+  bottom: auto;
+  top: auto;
+  padding: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 30px;
+}
+.carousel-caption > p{
+  font-family: cursive;
+ 
+}
+.carousel-caption > h5{
+  font-size: 2rem;
+}
+
+
+@media (width<=400px){
+  
+  .carousel-caption{
+    height: 287px;
+    padding: 1.5rem;
+  }
+}
+@media (width<=430px){
+  .reviews-section-heading{
+    padding: 1rem .5rem;
+  }
+  .reviews-section-heading > h1{
+    font-size: 2.6rem;
+  }
+
+}
+
+/* chefs-section */
+
+.chefs-section{
+  padding-bottom: 2rem;
+}
+.chefs-section > h1{
+  font-family: "Darumadrop One", cursive;
+  border-bottom: 2px solid orange;
+  width: fit-content;
+  margin: 2rem auto;
+}
+.chefs-cards-section{
+  display: flex;
+  overflow-x: scroll;
+}
+.chefs-cards-section::-webkit-scrollbar{
+  display:none;
+}
+.chefs-cards{
+  margin: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.chefs-cards > img{
+  aspect-ratio: 3/4; 
+  width:220px;
+  border-radius: 30px 30px 0 0;
+}
+.chefs-cards > h3{
+  font-family: "Darumadrop One", cursive;
+  color: rgb(255, 0, 0);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* download-section */
+
+
+.download-section{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items:center ;
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  padding-bottom: 0;
+  margin-block: 2rem;
+  background-color: rgba(249, 231, 198, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.download-section-text > h2{
+  font-family: "Darumadrop One", cursive;
+}
+.download-section-text > h3{
+  display: flex;
+  
+}
+.download-section-text > h3 > button{
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 30px;
+  border: 0;
+  background-color: rgb(248, 214, 149);
+  box-shadow: 0 0 5px orange;
+}
+.download-section-text > h3 > button:hover{
+ scale: 1.05;
+  background-color: rgb(255, 202, 103);
+}
+.download-section-text > h3 > button > p{
+  margin: 0 4px;
+  font-size: .7rem;
+}
+.download-section-text > h3 > button > p > b{
+  display:block;
+  margin: 0;
+  font-size: 1rem;
+}
+.download-section-img{
+  
+}
+.download-section-img > img{
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (width <= 740px){
+  .download-section{
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+
+@media (width <= 550px){
+  .download-section{
+    width: 100%;
+  }
+}
+@media (width <= 430px){
+  .download-section-text > h3 > button{
+    
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 0;
+    background-color: rgb(248, 214, 149);
+    box-shadow: 0 0 5px orange;
+  }
+  .download-section-text > h3 > button > i{
+    font-size: .8rem;
+    
+  }
+  .download-section-text > h3 > button > p{
+    margin: 0 4px;
+    font-size: .5rem;
+  }
+  .download-section-text > h3 > button > p > b{
+    display:block;
+    margin: 0;
+    font-size: .7rem;
+  }
+
+
+}
+
+
+
+/* footer-section */
+
+
+.footer-logo{
+  width: 150px;
+  margin:1rem auto 1rem 5%;
+}
+.footer{
+  border-top: 1px solid grey;
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
+}
+
+.footer-divs > h2{
+  font-family: "Darumadrop One", cursive;
+}
+.footer-divs{
+  margin-top: 4rem;
+}
+.footer-div-1{
+  margin-top: 2.5rem;
+}
+.footer-div-1 > input{
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid grey;
+  margin: 2rem auto;
+}
+.footer-div-1 > i{
+  background-color: rgb(255, 179, 38);
+  border-radius: 100%;
+  padding: .4rem;
+  margin: 2rem auto 2rem 1.3rem ;
+}
+.footer-div-1 > p{
+  font-size: 1.5rem;
+}
+.footer-div-1 > p > i{
+  margin-inline:1rem ;
+}
+.footer-div-3 > ul > li{
+ list-style: none;
+ margin-bottom: .5rem;
+}
+.footer-div-3 > ul > li > a{
+ text-decoration: none;
+ color: black;
+}
+
+@media (width<=950px){
+  .footer{
+    flex-direction: column;
+  }
+  .footer-div-3{
+    display: none;
+  }
+}
+
+
+
+
+
+
+/* author   */
+
+
+#author{
+  border-top: 2px solid white;
+  background-color: rgb(31,31,31);
+  padding: .3rem;
+}
+#author > h1{
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Patrick Hand', 'serif';
+  margin: 0;
+}
+#author > h1 span{
+  color: gold;
+  font-size: 3.5rem;
+  font-family: 'Sacramento' ;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 4px gold;
+  margin: 0;
+}
+
+@media (width<=600px){
+  #author > h1{
+    font-size: 1rem;
+  }
+  #author > h1 span{
+    font-size: 2rem;
   }
 }
