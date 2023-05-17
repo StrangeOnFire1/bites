@@ -11,7 +11,7 @@ import Reviews from './fragments/Reviews';
 import Services from './fragments/Services';
 import TopSection from './fragments/TopSection';
 // import  { useState } from 'react';
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 
 
 function App() {
